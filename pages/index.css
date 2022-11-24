@@ -1,6 +1,6 @@
-@import url(https://rsms.me/inter/inter.css);
-
 @import url(../vendor/normalize.css);
+
+@import url(../vendor/fonts/fonts.css);
 
 @import url(../blocks/page/page.css);
 
