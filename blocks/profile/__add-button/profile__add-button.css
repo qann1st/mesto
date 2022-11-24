@@ -5,6 +5,13 @@
   background-position: center;
   border: 2px solid #FFFFFF;
   width: 150px;
-  height: 50px;
-  margin-left: 244px;
+  height: 49px;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__add-button {
+    width: 100%;
+    background-size: 16px;
+  }
 }

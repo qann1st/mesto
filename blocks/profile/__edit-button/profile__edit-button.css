@@ -7,4 +7,14 @@
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 0 0 16px;
+  position: relative;
+  bottom: 9px;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+  }
 }
