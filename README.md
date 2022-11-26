@@ -2,7 +2,7 @@
 
 ## Описание: 
 
-"Mesto" - сайт с фотографиями России.
+"Mesto" - сайт с различными местами России.
 
 ![MAIN PAGE](https://user-images.githubusercontent.com/107764041/203836414-db4db488-36eb-407b-a7fa-3596fcb4ead2.png)
 
