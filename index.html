@@ -116,7 +116,7 @@
     </div>
     <section class="popup popup-edit-profile">
       <div class="popup__container">
-        <button class="popup__close"></button>
+        <button class="popup__close popup-edit-profile_close"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="popup__form" name="edit-profile">
           <input
@@ -132,6 +132,27 @@
             value="Исследователь океана"
           />
           <button class="popup__button" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </section>
+    <section class="popup popup-new-place">
+      <div class="popup__container">
+        <button class="popup__close popup-new-place_close"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__form" name="new-place">
+          <input
+            class="popup__input popup__name"
+            name="name"
+            type="text"
+            placeholder="Название"
+          />
+          <input
+            class="popup__input popup__description"
+            name="description"
+            type="text"
+            placeholder="Ссылка на картинку"
+          />
+          <button class="popup__button" type="submit">Создать</button>
         </form>
       </div>
     </section>
