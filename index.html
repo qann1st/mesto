@@ -28,86 +28,7 @@
           <button class="profile__add-button"></button>
         </div>
         <section>
-          <ul class="elements">
-            <li class="element">
-              <div class="element__image-wrapper">
-                <img
-                  class="element__image"
-                  alt="Фотокарточка"
-                  src="./images/kirill-pershin-karachaevsk.jpg"
-                />
-              </div>
-              <div class="element__description">
-                <h2 class="element__title">Карачаевск</h2>
-                <button class="element__like"></button>
-              </div>
-            </li>
-            <li class="element">
-              <div class="element__image-wrapper">
-                <img
-                  class="element__image"
-                  alt="Фотокарточка"
-                  src="./images/kirill-pershin-elbrus.png"
-                />
-              </div>
-              <div class="element__description">
-                <h2 class="element__title">Гора Эльбрус</h2>
-                <button class="element__like"></button>
-              </div>
-            </li>
-            <li class="element">
-              <div class="element__image-wrapper">
-                <img
-                  class="element__image"
-                  alt="Фотокарточка"
-                  src="./images/kirill-pershin-dombai.png"
-                />
-              </div>
-              <div class="element__description">
-                <h2 class="element__title">Домбай</h2>
-                <button class="element__like"></button>
-              </div>
-            </li>
-            <li class="element">
-              <div class="element__image-wrapper">
-                <img
-                  class="element__image"
-                  alt="Фотокарточка"
-                  src="./images/kirill-pershin-elbrus.png"
-                />
-              </div>
-              <div class="element__description">
-                <h2 class="element__title">Гора Эльбрус</h2>
-                <button class="element__like"></button>
-              </div>
-            </li>
-            <li class="element">
-              <div class="element__image-wrapper">
-                <img
-                  class="element__image"
-                  alt="Фотокарточка"
-                  src="./images/kirill-pershin-dombai.png"
-                />
-              </div>
-              <div class="element__description">
-                <h2 class="element__title">Домбай</h2>
-                <button class="element__like"></button>
-              </div>
-            </li>
-            <li class="element">
-              <div class="element__image-wrapper">
-                <img
-                  class="element__image"
-                  alt="Фотокарточка"
-                  src="./images/kirill-pershin-karachaevsk.jpg"
-                />
-              </div>
-              <div class="element__description">
-                <h2 class="element__title">Карачаево-Черкесск</h2>
-                <button class="element__like"></button>
-              </div>
-            </li>
-          </ul>
+          <ul class="elements"></ul>
         </section>
       </main>
       <footer class="footer">
@@ -118,7 +39,7 @@
       <div class="popup__container">
         <button class="popup__close popup-edit-profile_close"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form" name="edit-profile">
+        <form class="popup__form popup__form-edit-profile" name="edit-profile">
           <input
             class="popup__input popup__name"
             name="name"
@@ -139,23 +60,38 @@
       <div class="popup__container">
         <button class="popup__close popup-new-place_close"></button>
         <h2 class="popup__title">Новое место</h2>
-        <form class="popup__form" name="new-place">
+        <form class="popup__form popup__form-new-place" name="new-place">
           <input
-            class="popup__input popup__name"
+            class="popup__input popup__name_place"
             name="name"
             type="text"
             placeholder="Название"
           />
           <input
-            class="popup__input popup__description"
-            name="description"
-            type="text"
+            class="popup__input popup__image_link"
+            name="link"
+            type="link"
             placeholder="Ссылка на картинку"
           />
           <button class="popup__button" type="submit">Создать</button>
         </form>
       </div>
     </section>
+    <template class="card__template">
+      <li class="element">
+        <div class="element__image-wrapper">
+          <img
+            class="element__image"
+            alt=""
+            src=""
+          />
+        </div>
+        <div class="element__description">
+          <h2 class="element__title"></h2>
+          <button class="element__like"></button>
+        </div>
+      </li>
+    </template>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
