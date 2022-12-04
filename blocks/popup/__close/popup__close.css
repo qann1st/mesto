@@ -1,5 +1,6 @@
 .popup__close {
   background-image: url(../../../images/close.png);
+  background-size: 100%;
   width: 32px;
   height: 32px;
   border: 0;
@@ -13,4 +14,13 @@
 .popup__close:hover {
   opacity: 0.6;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__close {
+    top: -52px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+  }
 }
