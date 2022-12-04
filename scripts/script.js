@@ -66,7 +66,7 @@ function addCard(name, link) {
   const cardLike = cardElement.querySelector(".element__like");
 
   cardLike.addEventListener("click", () => {
-    
+    cardLike.classList.toggle('element__like_active')
   })
 
   cardElement.querySelector(".element__title").textContent = name;
