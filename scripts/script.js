@@ -58,16 +58,20 @@ function formSubmitHandlerEditProfile(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileDescription.textContent = jobInput.value;
-};
+}
 
 function addCard(name, link) {
   const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
   const cardImage = cardElement.querySelector(".element__image");
   const cardLike = cardElement.querySelector(".element__like");
+  const cardDelete = cardElement.querySelector(".element__delete");
 
   cardLike.addEventListener("click", () => {
-    cardLike.classList.toggle('element__like_active')
-  })
+    cardLike.classList.toggle("element__like_active");
+  });
+  cardDelete.addEventListener("click", () => {
+    cardElement.remove();
+  });
 
   cardElement.querySelector(".element__title").textContent = name;
   cardImage.src = link;
