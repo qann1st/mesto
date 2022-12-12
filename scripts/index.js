@@ -142,11 +142,11 @@ btnEdit.addEventListener("click", () => {
   jobInput.value = profileDescription.textContent;
 });
 
+btnAdd.addEventListener("click", () => openPopup(popupNewPlace));
+
 popupEditProfileClose.addEventListener("click", () =>
   closePopup(popupEditProfile)
 );
-
-btnAdd.addEventListener("click", () => openPopup(popupNewPlace));
 
 popupNewPlaceClose.addEventListener("click", () => closePopup(popupNewPlace));
 
