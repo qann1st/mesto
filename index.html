@@ -39,19 +39,29 @@
       <div class="popup__container">
         <button class="popup__close popup-edit-profile_close"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form popup__form-edit-profile" name="edit-profile">
+        <form class="popup__form popup__form-edit-profile" name="edit-profile" novalidate>
           <input
-            class="popup__input popup__name"
+            class="popup__input popup__name" 
             name="name"
+            id="edit-profile"
             type="text"
             value="Жак-Ив Кусто"
+            minlength="2"
+            maxlength="40"
+            required
           />
+          <span class="popup__form-input-error edit-profile-error"></span>
           <input
             class="popup__input popup__description"
             name="description"
             type="text"
+            id="about-profile"
             value="Исследователь океана"
+            minlength="2"
+            maxlength="40"
+            required
           />
+          <span class="popup__form-input-error about-profile-error"></span>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
       </div>
@@ -66,12 +76,16 @@
             name="name"
             type="text"
             placeholder="Название"
+            minlength="2"
+            maxlength="30"
+            required
           />
           <input
             class="popup__input popup__image_link"
             name="link"
-            type="link"
+            type="url"
             placeholder="Ссылка на картинку"
+            required
           />
           <button class="popup__button" type="submit">Создать</button>
         </form>
@@ -79,7 +93,7 @@
     </section>
     <section class="popup popup-photo">
       <div class="popup__image-all">
-        <button class="popup__close popup-image_close"></button>
+        <button class="popup__close popup__image_close"></button>
         <img class="popup__image" alt="" src="" />
         <p class="popup__image-description"></p>
       </div>
@@ -96,6 +110,7 @@
         </div>
       </li>
     </template>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>

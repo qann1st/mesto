@@ -6,11 +6,14 @@
   line-height: 22px;
   text-align: center;
   color: #ffffff;
-  width: 100%;
-  margin: 48px 0 0;
+  width: 85%;
+  margin: 0;
   padding: 0;
   height: 50px;
   transition: linear 0.1s;
+  border: 0;
+  position: absolute;
+  bottom: 30px;
 }
 
 .popup__button:hover {
@@ -23,7 +26,8 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    margin: 45px 0 0;
+    margin: 0;
     height: 46px;
+    bottom: 15px;
   }
 }
