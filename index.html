@@ -70,23 +70,27 @@
       <div class="popup__container">
         <button class="popup__close popup-new-place_close"></button>
         <h2 class="popup__title">Новое место</h2>
-        <form class="popup__form popup__form-new-place" name="new-place">
+        <form class="popup__form popup__form-new-place" name="new-place" novalidate>
           <input
             class="popup__input popup__name_place"
             name="name"
             type="text"
+            id="popup-name-place"
             placeholder="Название"
             minlength="2"
             maxlength="30"
             required
           />
+          <span class="popup__form-input-error popup-name-place-error"></span>
           <input
             class="popup__input popup__image_link"
             name="link"
             type="url"
+            id="popup-image-link"
             placeholder="Ссылка на картинку"
             required
           />
+          <span class="popup__form-input-error popup-image-link-error"></span>
           <button class="popup__button" type="submit">Создать</button>
         </form>
       </div>
@@ -110,7 +114,8 @@
         </div>
       </li>
     </template>
-    <script src="./scripts/index.js"></script>
     <script src="./scripts/validate.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
