@@ -36,10 +36,15 @@
       </footer>
     </div>
     <section class="popup popup-edit-profile">
+      <div class="popup__wrapper popup__wrapper-edit-profile"></div>
       <div class="popup__container">
         <button class="popup__close popup-edit-profile_close"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form popup__form-edit-profile" name="edit-profile" novalidate>
+        <form
+          class="popup__form popup__form-edit-profile"
+          name="edit-profile"
+          novalidate
+        >
           <input
             class="popup__input popup__name" 
             name="name"
@@ -67,31 +72,41 @@
       </div>
     </section>
     <section class="popup popup-new-place">
+      <div class="popup__wrapper popup__wrapper-new-place"></div>
       <div class="popup__container">
         <button class="popup__close popup-new-place_close"></button>
         <h2 class="popup__title">Новое место</h2>
-        <form class="popup__form popup__form-new-place" name="new-place">
+        <form
+          class="popup__form popup__form-new-place"
+          name="new-place"
+          novalidate
+        >
           <input
             class="popup__input popup__name_place"
             name="name"
             type="text"
+            id="popup-name-place"
             placeholder="Название"
             minlength="2"
             maxlength="30"
             required
           />
+          <span class="popup__form-input-error popup-name-place-error"></span>
           <input
             class="popup__input popup__image_link"
             name="link"
             type="url"
+            id="popup-image-link"
             placeholder="Ссылка на картинку"
             required
           />
+          <span class="popup__form-input-error popup-image-link-error"></span>
           <button class="popup__button" type="submit">Создать</button>
         </form>
       </div>
     </section>
     <section class="popup popup-photo">
+      <div class="popup__wrapper popup__wrapper-photo"></div>
       <div class="popup__image-all">
         <button class="popup__close popup__image_close"></button>
         <img class="popup__image" alt="" src="" />
@@ -110,7 +125,8 @@
         </div>
       </li>
     </template>
-    <script src="./scripts/index.js"></script>
     <script src="./scripts/validate.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
