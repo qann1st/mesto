@@ -68,11 +68,11 @@ enableValidation();
 
 function resetValidation(inputElement, formElement) {
   setEventListeners(formElement, inputElement);
-  const allPopupInputs = formElement.querySelectorAll(".popup__input")
+  const allPopupInputs = formElement.querySelectorAll(".popup__input");
 
   allPopupInputs.forEach((e) => {
-  const errorMessage = formElement.querySelector(`.${e.id}-error`);
-  errorMessage.classList.remove("popup__form-input-error_active");
-  e.classList.remove("popup__form_type_error");
+    const errorMessage = formElement.querySelector(`.${e.id}-error`);
+    errorMessage.classList.remove("popup__form-input-error_active");
+    e.classList.remove("popup__form_type_error");
   });
 }
