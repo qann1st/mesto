@@ -26,8 +26,12 @@ const popupImageDescription = popupPhoto.querySelector(
 const imageTitleInput = formNewPlaceElement.querySelector(".popup__name_place");
 const imageLink = formNewPlaceElement.querySelector(".popup__image_link");
 const popupPhotoClose = popupPhoto.querySelector(".popup__image_close");
-const popupWrapperEditProfile = document.querySelector(".popup__wrapper-edit-profile");
-const popupWrapperNewPlace = document.querySelector(".popup__wrapper-new-place");
+const popupWrapperEditProfile = document.querySelector(
+  ".popup__wrapper-edit-profile"
+);
+const popupWrapperNewPlace = document.querySelector(
+  ".popup__wrapper-new-place"
+);
 const popupWrapperPhoto = document.querySelector(".popup__wrapper-photo");
 
 function openPopup(element) {
@@ -111,14 +115,28 @@ btnAdd.addEventListener("click", () => {
   openPopup(popupNewPlace);
 });
 
-popupWrapperEditProfile.addEventListener("click", () => closePopup(popupEditProfile));
-popupEditProfileClose.addEventListener("click", () => closePopup(popupEditProfile), escapeClosePopup(popupEditProfile))
+popupWrapperEditProfile.addEventListener("click", () =>
+  closePopup(popupEditProfile)
+);
+popupEditProfileClose.addEventListener(
+  "click",
+  () => closePopup(popupEditProfile),
+  escapeClosePopup(popupEditProfile)
+);
 
 popupWrapperNewPlace.addEventListener("click", () => closePopup(popupNewPlace));
-popupNewPlaceClose.addEventListener("click", () => closePopup(popupNewPlace), escapeClosePopup(popupNewPlace))
+popupNewPlaceClose.addEventListener(
+  "click",
+  () => closePopup(popupNewPlace),
+  escapeClosePopup(popupNewPlace)
+);
 
 popupWrapperPhoto.addEventListener("click", () => closePopup(popupPhoto));
-popupPhotoClose.addEventListener("click", () => closePopup(popupPhoto), escapeClosePopup(popupPhoto))
+popupPhotoClose.addEventListener(
+  "click",
+  () => closePopup(popupPhoto),
+  escapeClosePopup(popupPhoto)
+);
 
 formEditProfileElement.addEventListener("submit", formSubmitHandlerEditProfile);
 formEditProfileElement.addEventListener("submit", () =>
