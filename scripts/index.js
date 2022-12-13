@@ -65,7 +65,7 @@ function openPopupImage(cardImage) {
   cardImage.addEventListener("click", () => {
     popupImage.src = cardImage.src;
     popupImage.alt = cardImage.alt;
-    popupImageDescription.textContent = name;
+    popupImageDescription.textContent = cardImage.name;
     openPopup(popupPhoto);
   });
 }
