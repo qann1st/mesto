@@ -36,12 +36,17 @@
       </footer>
     </div>
     <section class="popup popup-edit-profile">
+      <div class="popup__wrapper popup__wrapper-edit-profile"></div>
       <div class="popup__container">
         <button class="popup__close popup-edit-profile_close"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form popup__form-edit-profile" name="edit-profile" novalidate>
+        <form
+          class="popup__form popup__form-edit-profile"
+          name="edit-profile"
+          novalidate
+        >
           <input
-            class="popup__input popup__name" 
+            class="popup__input popup__name"
             name="name"
             id="edit-profile"
             type="text"
@@ -67,10 +72,15 @@
       </div>
     </section>
     <section class="popup popup-new-place">
+      <div class="popup__wrapper popup__wrapper-new-place"></div>
       <div class="popup__container">
         <button class="popup__close popup-new-place_close"></button>
         <h2 class="popup__title">Новое место</h2>
-        <form class="popup__form popup__form-new-place" name="new-place" novalidate>
+        <form
+          class="popup__form popup__form-new-place"
+          name="new-place"
+          novalidate
+        >
           <input
             class="popup__input popup__name_place"
             name="name"
@@ -96,6 +106,7 @@
       </div>
     </section>
     <section class="popup popup-photo">
+      <div class="popup__wrapper popup__wrapper-photo"></div>
       <div class="popup__image-all">
         <button class="popup__close popup__image_close"></button>
         <img class="popup__image" alt="" src="" />

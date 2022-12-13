@@ -1,3 +1,4 @@
 .popup__image-all {
   position: relative;
+  z-index: 2;
 }
