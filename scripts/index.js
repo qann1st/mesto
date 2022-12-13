@@ -56,26 +56,9 @@ function renderCards(name, link) {
   cardLike.addEventListener("click", () => {
     cardLike.classList.toggle("element__like_active");
   });
-}
-
-function deleteCard(cardElement, cardDelete) {
   cardDelete.addEventListener("click", () => {
     cardElement.remove();
   });
-}
-
-function addCards(cardElement) {
-  cards.prepend(cardElement);
-}
-
-function renderCards(name, link) {
-  const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
-  const cardImage = cardElement.querySelector(".element__image");
-  const cardDelete = cardElement.querySelector(".element__delete");
-  const cardLike = cardElement.querySelector(".element__like");
-
-  cardAddLike(cardLike);
-  deleteCard(cardElement, cardDelete);
 
   cardName.textContent = name;
   cardImage.src = link;
@@ -127,8 +110,6 @@ btnAdd.addEventListener("click", () => {
   resetValidation(imageLink, formNewPlaceElement);
   openPopup(popupNewPlace);
 });
-
-btnAdd.addEventListener("click", () => openPopup(popupNewPlace));
 
 popupWrapperEditProfile.addEventListener("click", () => closePopup(popupEditProfile));
 popupEditProfileClose.addEventListener("click", () => closePopup(popupEditProfile), escapeClosePopup(popupEditProfile))
