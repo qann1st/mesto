@@ -50,10 +50,23 @@ function escapeClosePopup(element) {
   });
 }
 
+function createCard(name, link) {
+  const newCard = new Card(
+    name,
+    link,
+    cardTemplate,
+    popupPhoto,
+    popupImage,
+    popupPhotoClose
+  );
+  const cardElement = newCard.renderCard();
+  document.querySelector(".elements").prepend(cardElement);
+}
+
 function formSubmitHandlerNewPlace(evt) {
   evt.preventDefault();
 
-  renderCards(imageTitleInput.value, imageLink.value);
+  createCard(imageTitleInput.value, imageLink.value);
 
   evt.target.reset();
 }
@@ -66,7 +79,8 @@ function formSubmitHandlerEditProfile(evt) {
 
 initialCards.forEach((item) => {
   const card = new Card(
-    item,
+    item.name,
+    item.link,
     cardTemplate,
     popupPhoto,
     popupImage,

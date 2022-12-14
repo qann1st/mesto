@@ -1,8 +1,8 @@
 export default class Card {
-  constructor(data, template, popupPhoto, popupImage, popupPhotoBtnClose) {
+  constructor(name, link, template, popupPhoto, popupImage, popupPhotoBtnClose) {
     this._template = template;
-    this._name = data.name;
-    this._link = data.link;
+    this._name = name;
+    this._link = link;
     this._popupImage = popupImage;
     this._popupPhotoBtnClose = popupPhotoBtnClose;
     this._popupPhoto = popupPhoto;
@@ -38,14 +38,14 @@ export default class Card {
 
   renderCard() {
     this._element = this._getTemplate();
-    const cardImage = this._element.querySelector(".element__image");
+    this._cardImage = this._element.querySelector(".element__image");
+    this._cardTitle = this._element.querySelector(".element__title");
+    this._cardImage.src = this._link;
+    this._cardImage.alt = this._name;
+    this._cardTitle.textContent = this._name;
+    this._deleteCard = this._element.querySelector(".element__remove");
+    this._likeCard = this._element.querySelector(".element__like");
     this._setEventListeners();
-
-    cardImage.src = this._link;
-    cardImage.name = this._name;
-    cardImage.alt = this._name;
-    this._element.querySelector(".element__title").textContent = this._name;
-
     return this._element;
   }
 
