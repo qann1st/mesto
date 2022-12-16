@@ -4,3 +4,7 @@
   color: #000;
   opacity: 0.2;
 }
+
+.popup__button_disabled:hover {
+  opacity: 0.2;
+}
