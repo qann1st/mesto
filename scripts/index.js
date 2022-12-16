@@ -1,9 +1,12 @@
 import Card from "./Card.js";
 import { initialCards } from "./data.js";
+import FormValidator from "./FormValidator.js";
 
 const btnEdit = document.querySelector(".profile__edit-button");
 const btnAdd = document.querySelector(".profile__add-button");
+const popupForm = document.querySelector(".popup__form");
 const popupEditProfile = document.querySelector(".popup-edit-profile");
+const formList = Array.from(document.querySelectorAll(".popup__form"));
 const popupEditProfileClose = popupEditProfile.querySelector(
   ".popup-edit-profile_close"
 );
@@ -91,23 +94,41 @@ initialCards.forEach((item) => {
   document.querySelector(".elements").prepend(cardElement);
 });
 
+const inputList = Array.from(document.querySelectorAll(".popup__input"));
+
+function enableValidation() {
+  formList.forEach((form) => {
+    const validator = new FormValidator(form);
+    validator._setEventListeners();
+  });
+}
+
+enableValidation();
+
 btnEdit.addEventListener("click", () => {
   nameInput.value = profileName.textContent;
   jobInput.value = profileDescription.textContent;
   openPopup(popupEditProfile);
-  resetValidation(nameInput, formEditProfileElement);
+  formList.forEach((form) => {
+    const validator = new FormValidator(form);
+    validator.resetValidation(inputList);
+  });
 });
 
 btnAdd.addEventListener("click", () => {
   imageLink.value = "";
   imageTitleInput.value = "";
-  resetValidation(imageLink, formNewPlaceElement);
   openPopup(popupNewPlace);
+  formList.forEach((form) => {
+    const validator = new FormValidator(form);
+    validator.resetValidation(inputList);
+  });
 });
 
 popupWrapperEditProfile.addEventListener("click", () =>
   closePopup(popupEditProfile)
 );
+
 popupEditProfileClose.addEventListener(
   "click",
   () => closePopup(popupEditProfile),
