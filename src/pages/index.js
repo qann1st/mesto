@@ -1,17 +1,12 @@
 import Card from '../components/Card.js';
 import { initialCards } from '../utils/data.js';
 import FormValidator from '../components/FormValidator.js';
-import {
-  btnEdit,
-  btnAdd,
-  formList,
-  cardTemplate,
-  cardList,
-} from '../utils/constants.js';
+import { btnEdit, btnAdd, formList, cardTemplate, cardList } from '../utils/constants.js';
 import Section from '../components/Section.js';
 import Popup from '../components/Popup.js';
 import PopupWithForm from '../components/PopupWithForm.js';
 import UserInfo from '../components/UserInfo.js';
+import './index.css';
 
 const renderCard = new Section(
   {
