@@ -1,14 +1,16 @@
 .popup__form-input-error {
-  font-size: 10px;
-  top: 0;
-  margin-top: -26px;
+  margin: 5px 0 13px;
+  height: 12px;
   padding: 0;
   opacity: 0;
-  color: red;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff0000;
 }
 
 @media screen and (max-width: 767px) {
   .popup__form-input-error {
-    margin-top: -16px;
+    margin-bottom: 10px;
   }
 }

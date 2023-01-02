@@ -23,10 +23,13 @@ export default class PopupWithForm extends Popup {
     });
   }
 
-  close() {
-    super.close();
+  setInputValues(values) {
     this._inputs.forEach((input) => {
-      input.value = values[input.name];
+      input.value = values[input.name] || '';
     });
+  }
+
+  getForm() {
+    return this._form;
   }
 }
