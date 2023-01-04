@@ -1,6 +1,7 @@
 export const btnEdit = document.querySelector('.profile__edit-button');
 export const btnAdd = document.querySelector('.profile__add-button');
-export const formList = Array.from(document.querySelectorAll('.popup__form'));
+export const btnAvatarEdit = document.querySelector('.profile__avatar_edit');
+export const avatarImage = document.querySelector('.profile__avatar_img');
 export const cardTemplate = document.querySelector('.card__template');
 export const cardList = document.querySelector('.elements');
 export const validationConfig = {

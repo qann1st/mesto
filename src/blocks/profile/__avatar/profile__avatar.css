@@ -1,6 +1,29 @@
 .profile__avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__avatar_img {
+  border-radius: 50%;
   width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.profile__avatar_edit {
+  width: 122px;
+  height: 122px;
   border-radius: 120px;
+  position: absolute;
+}
+
+.profile__avatar_edit:hover {
+  background-image: url(../../../images/edit.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (max-width: 767px) {
