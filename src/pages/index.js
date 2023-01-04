@@ -57,13 +57,10 @@ const renderCard = new Section((item) => {
   return newCard;
 }, cardList);
 
-api.getInitialCards().then((res) => {
-  renderCard.addItems(res);
-});
-api.getUserInfo().then((res) => {
-  userInfo.setUserInfo(res);
-  userInfo.setId(res._id);
-  avatarImage.src = res.avatar;
+Promise.all([api.getUserInfo(), api.getInitialCards()]).then(([user, cards]) => {
+  userInfo.setUserInfo(user);
+  avatarImage.src = user.avatar;
+  renderCard.addItems(cards);
 });
 
 function handleOpenPopup(link, name) {
