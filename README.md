@@ -2,11 +2,11 @@
 
 ## Описание:
 
-"Mesto" - на данном сайте, вы можете увидеть различные места России.
+"Mesto" - сайт про места России сделанный с использованием полулярной библиотеки для разработки интерфейсов React.
 
-![MAIN PAGE](https://user-images.githubusercontent.com/107764041/203836414-db4db488-36eb-407b-a7fa-3596fcb4ead2.png)
+![Снимок экрана от 2023-01-05 03-14-41](https://user-images.githubusercontent.com/107764041/210673826-f45dce3c-80ba-45d5-b22f-12286873f3d2.png)
 
-[Ссылка на GitHub Pages](https://qann1st.github.io/mesto/)
+[Ссылка на GitHub Pages](https://qann1st.github.io/mesto-react/)
 
 ## Функционал:
 
@@ -23,3 +23,14 @@
 - HTML/CSS/JS
 - Адаптивная вёрстка
 - Flex/Grid
+
+## Сборка и разработка проекта
+
+### npm start
+
+Запускает режим разработки.
+Откройте [http://localhost:3000](http://localhost:3000) для просмотра приложения в браузере.
+Перезагрузка происходит автоматически, при сохранении.
+
+npm run build
+Запуск сборки проекта в production режиме, проект будет собран в папку build.
